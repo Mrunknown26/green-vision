@@ -147,7 +147,7 @@ export default function RootLayout({ children }) {
           </div>
 
           {/* Custom cursor effect */}
-          <CustomCursor />
+          {/* <CustomCursor /> */}
 
           {/* Floating WhatsApp Widget in Bottom Right */}
           <WhatsAppWidget />

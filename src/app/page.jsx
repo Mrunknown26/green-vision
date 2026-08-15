@@ -4,6 +4,7 @@ import MarqueeTicker from '@/components/MarqueeTicker';
 import AboutSection from '@/components/AboutSection';
 import ServicesSection from '@/components/ServicesSection';
 import PortfolioSection from '@/components/PortfolioSection';
+import PortfolioShowcase2026 from '@/components/PortfolioShowcase2026';
 import ProcessSection from '@/components/ProcessSection';
 import ClienteleSection from '@/components/ClienteleSection';
 import ImpactSection from '@/components/ImpactSection';
@@ -19,40 +20,43 @@ export default function HomePage() {
       <Navbar />
 
       {/* Hero Section */}
-      <Hero />
+      {/* <Hero /> */}
 
       {/* Smooth Marquee Text Ticker */}
-      <MarqueeTicker />
+      {/* <MarqueeTicker /> */}
 
       {/* About & Studio Manifesto */}
-      <AboutSection />
+      {/* <AboutSection /> */}
 
       {/* Core Design Services & Disciplines */}
-      <ServicesSection />
+      {/* <ServicesSection /> */}
 
       {/* Selected Works & Case Archives */}
-      <PortfolioSection />
+      {/* <PortfolioSection /> */}
+
+      {/* Behance Portfolio 2026 Showcase with Yet Another React Lightbox */}
+      <PortfolioShowcase2026 />
 
       {/* 6-Stage Creative Process */}
-      <ProcessSection />
+      {/* <ProcessSection /> */}
 
       {/* Enterprise Clientele & Testimonials */}
-      <ClienteleSection />
+      {/* <ClienteleSection /> */}
 
       {/* Impact & Business Outcomes */}
-      <ImpactSection />
+      {/* <ImpactSection /> */}
 
       {/* Interactive Scope & Quote Estimator */}
-      <ProjectEstimator />
+      {/* <ProjectEstimator /> */}
 
       {/* Frequently Asked Questions */}
-      <FAQSection />
+      {/* <FAQSection /> */}
 
       {/* Contact & Inquiry Section */}
-      <ContactSection />
+      {/* <ContactSection /> */}
 
       {/* Footer */}
-      <Footer />
+      {/* <Footer /> */}
     </main>
   );
 }
