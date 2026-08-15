@@ -84,7 +84,7 @@ export default function Navbar() {
             href="#contact"
             className="bg-brand-lime text-brand-dark px-3 py-1.5 rounded-full font-bold text-xs"
           >
-            Let's Talk
+            Contact
           </Link>
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
