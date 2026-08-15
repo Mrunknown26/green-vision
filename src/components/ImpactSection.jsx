@@ -26,7 +26,7 @@ export default function ImpactSection() {
             <div className="flex items-center gap-2 mb-3">
               <span className="w-2 h-2 rounded-full bg-brand-lime" />
               <span className="text-xs font-mono tracking-widest text-brand-lime uppercase font-semibold">
-                PAGE 17 // BUSINESS OUTCOMES
+                BUSINESS OUTCOMES
               </span>
             </div>
             <h2 className="font-serif-heading text-4xl sm:text-6xl text-white font-normal leading-tight">
