@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <!-- Background Dark Rounded Square -->
+  <rect width="64" height="64" rx="16" fill="#080A08" />
+  <rect width="64" height="64" rx="16" stroke="#A0C60F" stroke-width="2" stroke-opacity="0.35" />
+  
+  <!-- Ambient Green Glow -->
+  <circle cx="32" cy="32" r="18" fill="#A0C60F" fill-opacity="0.18" filter="blur(4px)" />
+
+  <!-- Outer Eye Almond Contour -->
+  <path
+    d="M8 32C16 16 48 16 56 32C48 48 16 48 8 32Z"
+    fill="#FFFFFF"
+  />
+
+  <!-- Inner Dark Iris Background -->
+  <circle cx="32" cy="32" r="12" fill="#080A08" />
+
+  <!-- Inner Iris Lime Ring -->
+  <circle cx="32" cy="32" r="10" stroke="#A0C60F" stroke-width="1.5" fill="none" />
+
+  <!-- Crosshair Reticle -->
+  <line x1="32" y1="20" x2="32" y2="44" stroke="#A0C60F" stroke-width="1" stroke-opacity="0.7" />
+  <line x1="20" y1="32" x2="44" y2="32" stroke="#A0C60F" stroke-width="1" stroke-opacity="0.7" />
+
+  <!-- Central 4-Point Star Core -->
+  <path
+    d="M32 26C32 29.5 34.5 32 38 32C34.5 32 32 34.5 32 38C32 34.5 29.5 32 26 32C29.5 32 32 29.5 32 26Z"
+    fill="#A0C60F"
+  />
+  <circle cx="32" cy="32" r="1.5" fill="#FFFFFF" />
+</svg>
