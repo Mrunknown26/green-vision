@@ -84,15 +84,15 @@ export default function PortfolioSection() {
               <div className="relative aspect-[16/10] w-full overflow-hidden bg-zinc-900">
                 <Image
                   src={project.image}
-                  alt={project.title}
+                  alt={`Green Vision Graphics Design & Branding - ${project.title} (${project.subtitle})`}
                   fill
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-108"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                 {/* Badge */}
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full bg-zinc-950/80 backdrop-blur-md border border-white/15 text-brand-lime text-[11px] font-mono font-medium">
+                  <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md border border-white/15 text-brand-lime text-[11px] font-mono font-medium">
                     {project.badge}
                   </span>
                 </div>
@@ -104,10 +104,15 @@ export default function PortfolioSection() {
                   </div>
                 </div>
 
-                <div className="absolute bottom-4 left-4 right-4">
-                  <span className="text-[11px] font-mono text-zinc-400 uppercase tracking-wider block">
-                    {project.client} • {project.location}
-                  </span>
+                <div className="absolute bottom-3 left-3 right-3">
+                  <div className="bg-black/70 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/15 inline-flex items-center shadow-lg max-w-full">
+                    <span
+                      className="text-[11px] font-mono uppercase tracking-wider block truncate font-medium"
+                      style={{ color: '#FFFFFF' }}
+                    >
+                      {project.client} • {project.location}
+                    </span>
+                  </div>
                 </div>
               </div>
 

@@ -82,16 +82,16 @@ export const servicesList = [
   {
     id: "creative-direction",
     number: "06",
-    title: "Creative Direction & Web Experiences",
-    shortDesc: "Holistic brand repositioning, editorial lookbooks, and high-performance digital websites.",
-    longDesc: "We oversee your brand across all touchpoints, ensuring seamless synergy between your digital website, physical merchandise, catalogs, and media campaigns.",
+    title: "Graphics Design & Editorial Lookbooks",
+    shortDesc: "High-end corporate graphic design, editorial lookbooks, catalogs, and modern digital experiences.",
+    longDesc: "Green Vision oversees your brand across all graphic touchpoints, ensuring seamless synergy between your print publications, editorial lookbooks, physical merchandise, catalogs, and high-performance digital web experiences.",
     features: [
-      "Full Brand Architecture & Audit",
+      "Bespoke Graphics Design & Publication Layouts",
       "Editorial Catalogs & Lookbook Publishing",
       "Digital Web Interface Design & Next.js Builds",
-      "Strategic Market Positioning"
+      "Full Brand Architecture & Corporate Collateral"
     ],
-    deliverables: "Creative direction playbook, digital assets, production guidance",
+    deliverables: "Creative direction playbook, vector design assets, production guidance",
     baseEstimateDays: "14 - 30 Days",
     tag: "Full Ecosystem"
   }

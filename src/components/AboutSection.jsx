@@ -92,13 +92,13 @@ export default function AboutSection() {
             className="lg:col-span-7 space-y-6 text-zinc-300 text-base sm:text-lg leading-relaxed"
           >
             <p className="text-white text-lg sm:text-xl font-medium leading-relaxed border-l-2 border-brand-lime pl-4">
-              At <strong className="text-brand-lime">Green Vision Branding Studio</strong>, we believe powerful branding is more than just visuals—it's the bridge between imagination and identity. In a world flooded with messages, we help brands stand out, stay relevant, and connect meaningfully with their audience.
+              At <strong className="text-brand-lime">Green Vision Branding Studio</strong>, we believe powerful branding is more than just visuals—it's the bridge between imagination and market dominance. In a world flooded with messages, Green Vision helps brands stand out, command authority, and connect meaningfully with their target audience.
             </p>
             <p className="text-zinc-300 text-sm sm:text-base">
-              Founded with a passion for creativity and an unyielding commitment to design excellence, Green Vision brings brands to life through smart strategies, compelling visuals, and unforgettable stories. We don't just design—we craft experiences that speak, inspire, and leave a lasting impression.
+              Founded with a passion for creative excellence and strategic execution, <strong className="text-white">Green Vision Graphics Design & Branding Studio</strong> brings companies to life through trademark logos, tactile packaging, photorealistic 3D product visuals, and unforgettable brand storytelling. We don't just design—we engineer visual assets that inspire, convert, and leave an enduring market impression.
             </p>
             <p className="text-zinc-300 text-sm sm:text-base">
-              From logo design to large-scale highway hoarding campaigns, 3D product visualizations to cutting-edge social media creatives, we deliver end-to-end solutions with precision and heart. Our team is a fusion of creative thinkers, branding strategists, 3D digital artists, and storyteller all driven by one vision: to grow brands that people remember.
+              From corporate brand identities to monumental highway hoardings along national corridors, custom 3D character mascots (such as Master Gruton) to high-engagement social media campaigns, we deliver end-to-end creative solutions across <strong className="text-white">Rajkot, Surat, Morbi, and Gujarat</strong>. Our multidisciplinary team of graphic designers, 3D CGI artists, and brand strategists is driven by one unified mission: growing brands that people remember and choose.
             </p>
 
             <div className="pt-4 flex items-center gap-6">

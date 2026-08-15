@@ -59,7 +59,7 @@ export default function Footer() {
               Green Vision Studio
             </h4>
             <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
-              Premier Branding & Advertising Studio delivering bespoke brand identities, 3D character mascots, high-impact hoardings, and packaging systems.
+              Premier Branding, Graphic Design & 3D Advertising Studio delivering bespoke corporate identities, 3D character mascots, high-impact hoardings, and packaging systems across Rajkot, Surat, Morbi, and Gujarat.
             </p>
           </div>
 
@@ -69,12 +69,13 @@ export default function Footer() {
               Navigation
             </h4>
             <ul className="space-y-2 text-zinc-600 dark:text-zinc-400 font-medium">
-              <li><Link href="#about" className="hover:text-zinc-950 dark:hover:text-white transition-colors">About Us</Link></li>
-              <li><Link href="#services" className="hover:text-zinc-950 dark:hover:text-white transition-colors">Design Disciplines</Link></li>
+              <li><Link href="#about" className="hover:text-zinc-950 dark:hover:text-white transition-colors">About Green Vision</Link></li>
+              <li><Link href="#services" className="hover:text-zinc-950 dark:hover:text-white transition-colors">Design & Branding Services</Link></li>
               <li><Link href="#work" className="hover:text-zinc-950 dark:hover:text-white transition-colors">Selected Case Studies</Link></li>
               <li><Link href="#process" className="hover:text-zinc-950 dark:hover:text-white transition-colors">Creative Process</Link></li>
               <li><Link href="#clientele" className="hover:text-zinc-950 dark:hover:text-white transition-colors">Client Roster (20+)</Link></li>
-              <li><Link href="#estimator" className="hover:text-zinc-950 dark:hover:text-white transition-colors">Quote Estimator</Link></li>
+              <li><Link href="#faq" className="hover:text-zinc-950 dark:hover:text-white transition-colors">Frequently Asked Questions</Link></li>
+              <li><Link href="#estimator" className="hover:text-zinc-950 dark:hover:text-white transition-colors">Instant Quote Estimator</Link></li>
             </ul>
           </div>
 
@@ -84,39 +85,56 @@ export default function Footer() {
               Core Capabilities
             </h4>
             <ul className="space-y-2 text-zinc-600 dark:text-zinc-400">
-              <li>Branding & Identity Design</li>
-              <li>3D Mascot & Character Design</li>
-              <li>Product Packaging & Sacks</li>
-              <li>Hoarding & Outdoor Billboards</li>
-              <li>Social Media Creative Strategy</li>
+              <li>Brand Identity & Logo Design</li>
+              <li>3D Mascot & Character Modeling</li>
+              <li>Product Packaging & Industrial Bags</li>
+              <li>Mega Hoarding & Billboard Design</li>
+              <li>Social Media Art Direction</li>
               <li>Luxury Sample Presentation Kits</li>
+              <li>Editorial Lookbook & Catalog Publishing</li>
             </ul>
           </div>
 
           {/* Col 4: Contact */}
           <div className="space-y-3">
             <h4 className="font-mono text-[#6A9400] dark:text-brand-lime uppercase tracking-wider font-semibold">
-              Direct Contact
+              Direct Contact & Locations
             </h4>
-            <ul className="space-y-2.5 text-zinc-600 dark:text-zinc-400">
-              <li className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-[#6A9400] dark:text-brand-lime" />
-                <a href={`tel:${STUDIO_PHONE.replace(/\s+/g, '')}`} className="hover:text-zinc-950 dark:hover:text-white">
+            <address className="not-italic space-y-2.5 text-zinc-600 dark:text-zinc-400">
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-[#6A9400] dark:text-brand-lime flex-shrink-0" />
+                <a href={`tel:${STUDIO_PHONE.replace(/\s+/g, '')}`} className="hover:text-zinc-950 dark:hover:text-white font-medium">
                   {STUDIO_PHONE}
                 </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-[#6A9400] dark:text-brand-lime" />
-                <a href={`mailto:${STUDIO_EMAIL}`} className="hover:text-zinc-950 dark:hover:text-white break-all">
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-[#6A9400] dark:text-brand-lime flex-shrink-0" />
+                <a href={`mailto:${STUDIO_EMAIL}`} className="hover:text-zinc-950 dark:hover:text-white break-all font-medium">
                   {STUDIO_EMAIL}
                 </a>
-              </li>
-              <li className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#6A9400] dark:text-brand-lime" />
+              </div>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 text-[#6A9400] dark:text-brand-lime flex-shrink-0 mt-0.5" />
                 <span>{STUDIO_LOCATIONS}</span>
-              </li>
-            </ul>
+              </div>
+            </address>
           </div>
+        </div>
+
+        {/* SEO Regional Keyword Footer Tags */}
+        <div className="py-6 border-b border-zinc-200 dark:border-white/10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-[11px] font-mono text-zinc-500">
+          <span className="text-[#6A9400] dark:text-brand-lime font-semibold">SERVICING REGIONS:</span>
+          <span>Rajkot Branding Agency</span>
+          <span>•</span>
+          <span>Surat Graphic Design Studio</span>
+          <span>•</span>
+          <span>Morbi Ceramic Packaging</span>
+          <span>•</span>
+          <span>Ahmedabad 3D Mascot Design</span>
+          <span>•</span>
+          <span>Gujarat Outdoor Billboard Advertising</span>
+          <span>•</span>
+          <span>Global Brand Identity Design</span>
         </div>
 
         {/* Copyright & Sub-Footer */}
@@ -124,13 +142,13 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} Green Vision Branding Studio. All Rights Reserved.</p>
           <div className="flex items-center gap-6">
             <a href={buildWhatsAppUrl()} target="_blank" rel="noopener noreferrer" className="hover:text-[#6A9400] dark:hover:text-brand-lime transition-colors">
-              WhatsApp
+              WhatsApp Direct
             </a>
             <a href={`mailto:${STUDIO_EMAIL}`} className="hover:text-[#6A9400] dark:hover:text-brand-lime transition-colors">
-              Gmail Direct
+              Gmail Inquiry
             </a>
             <Link href="#contact" className="hover:text-[#6A9400] dark:hover:text-brand-lime transition-colors">
-              Book a Call
+              Start Project
             </Link>
           </div>
         </div>

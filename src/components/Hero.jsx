@@ -23,11 +23,14 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-8"
         >
+          <span className="px-3.5 py-1 rounded-full bg-brand-lime/10 dark:bg-brand-lime/10 border border-brand-lime/30 text-[#6E9B00] dark:text-brand-lime text-xs font-mono tracking-wider uppercase shadow-sm font-bold">
+            GREEN VISION BRANDING STUDIO
+          </span>
           <span className="px-3.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-300 dark:border-white/10 text-zinc-700 dark:text-zinc-300 text-xs font-mono tracking-wider uppercase shadow-sm">
-            RAJKOT • SURAT
+            RAJKOT • SURAT • GUJARAT
           </span>
           <span className="px-3.5 py-1 rounded-full bg-zinc-100 dark:bg-zinc-900/80 border border-zinc-300 dark:border-white/10 text-zinc-700 dark:text-zinc-300 text-xs font-mono tracking-wider uppercase hidden md:inline-block shadow-sm">
-            BRANDING ARCHIVE 2021-2026
+            GRAPHIC DESIGN & 3D VISUALIZATION
           </span>
         </motion.div>
 
@@ -81,8 +84,7 @@ export default function Hero() {
             transition={{ duration: 0.85, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
             className="mt-8 text-base sm:text-lg md:text-xl text-zinc-600 dark:text-zinc-300 max-w-3xl mx-auto font-normal leading-relaxed"
           >
-            A premier Branding & Advertising studio in <span className="text-zinc-900 dark:text-white font-medium">Rajkot & Surat</span>.
-            Specializing in high-recall visual identities, 3D mascots, commercial packaging, and monumental outdoor hoardings that command attention.
+            <strong className="text-zinc-900 dark:text-white font-semibold">Green Vision</strong> is Gujarat’s premier <span className="text-zinc-900 dark:text-white font-medium">Branding, Graphic Design & 3D Advertising Studio</span> based in Rajkot & Surat. Specializing in high-recall visual identities, 3D character mascots, commercial packaging architectures, and monumental highway outdoor hoardings.
           </motion.p>
 
           {/* Call-to-Action Buttons */}

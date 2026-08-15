@@ -52,21 +52,21 @@ export default function CaseStudyModal({ project, onClose }) {
           <div className="relative aspect-video w-full rounded-2xl overflow-hidden border border-zinc-200 dark:border-white/10 shadow-xl bg-zinc-900">
             <Image
               src={project.image}
-              alt={project.title}
+              alt={`Green Vision Portfolio - ${project.title} (${project.subtitle})`}
               fill
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
-              <div>
-                <span className="text-xs font-mono uppercase text-brand-lime tracking-widest font-semibold">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+              <div className="bg-black/75 backdrop-blur-md p-4 sm:p-6 rounded-2xl border border-white/15 max-w-2xl shadow-2xl">
+                <span className="text-xs font-mono uppercase tracking-widest font-bold block mb-1.5" style={{ color: '#A0C60F' }}>
                   {project.client}
                 </span>
-                <h2 className="text-2xl sm:text-4xl font-serif-heading text-white font-normal">
+                <h2 className="text-2xl sm:text-4xl font-serif-heading font-normal leading-tight" style={{ color: '#FFFFFF' }}>
                   {project.title}
                 </h2>
-                <p className="text-xs sm:text-sm text-zinc-200 italic">
+                <p className="text-xs sm:text-sm italic mt-1.5 font-sans" style={{ color: '#E4E4E7' }}>
                   "{project.tagline}"
                 </p>
               </div>
