@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://greenvisionstudio.com';
+  const baseUrl = 'https://www.greenvisionbranding.com';
   const currentDate = new Date().toISOString();
 
   return [

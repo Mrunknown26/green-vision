@@ -2,7 +2,7 @@ import { faqList } from '@/data/testimonialsData';
 import { STUDIO_PHONE, STUDIO_EMAIL, STUDIO_LOCATIONS } from '@/lib/utils';
 
 export default function StructuredData() {
-  const baseUrl = 'https://greenvisionstudio.com';
+  const baseUrl = 'https://www.greenvisionbranding.com';
 
   const organizationSchema = {
     '@context': 'https://schema.org',

@@ -1,5 +1,5 @@
 export default function robots() {
-  const baseUrl = 'https://greenvisionstudio.com';
+  const baseUrl = 'https://www.greenvisionbranding.com';
 
   return {
     rules: [

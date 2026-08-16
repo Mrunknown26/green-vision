@@ -5,7 +5,7 @@ import StructuredData from "@/components/StructuredData";
 import { ThemeProvider } from "@/context/ThemeContext";
 
 export const metadata = {
-  metadataBase: new URL("https://greenvisionstudio.com"),
+  metadataBase: new URL("https://www.greenvisionbranding.com"),
   title: {
     default: "Green Vision | Branding, Graphic Design & 3D Advertising Studio • Rajkot & Surat",
     template: "%s | Green Vision - Branding & Graphics Design",
@@ -39,18 +39,18 @@ export const metadata = {
     "sample presentation box kit",
     "luxury catalog lookbook design"
   ],
-  authors: [{ name: "Green Vision Branding Studio", url: "https://greenvisionstudio.com" }],
+  authors: [{ name: "Green Vision Branding Studio", url: "https://www.greenvisionbranding.com" }],
   creator: "Green Vision Studio",
   publisher: "Green Vision Studio",
   category: "Design & Creative Agency",
   classification: "Branding, Graphic Design, 3D Mascot Design, Packaging, Advertising",
   alternates: {
-    canonical: "https://greenvisionstudio.com",
+    canonical: "https://www.greenvisionbranding.com",
   },
   openGraph: {
     title: "Green Vision | Branding, Graphic Design & 3D Advertising Studio",
     description: "Where vision meets impact — Crafting brands that resonate. Premier branding, 3D mascot visualization, packaging architecture, and mega outdoor hoardings in Rajkot & Surat.",
-    url: "https://greenvisionstudio.com",
+    url: "https://www.greenvisionbranding.com",
     siteName: "Green Vision Branding Studio",
     locale: "en_IN",
     type: "website",
