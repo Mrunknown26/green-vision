@@ -22,7 +22,7 @@ export default function StructuredData() {
     ],
     url: baseUrl,
     logo: `${baseUrl}/favicon.svg`,
-    image: `${baseUrl}/og-image.png`,
+    image: `${baseUrl}/og-image.svg`,
     description:
       'Green Vision is a premier Branding, Graphic Design & 3D Advertising Studio based in Rajkot and Surat, Gujarat. We craft impactful brand identities, commercial packaging design, 3D product visualizations, mascots, outdoor hoardings, and bespoke graphics.',
     telephone: STUDIO_PHONE,

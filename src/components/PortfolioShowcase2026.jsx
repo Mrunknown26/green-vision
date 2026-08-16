@@ -29,6 +29,8 @@ export default function PortfolioShowcase2026() {
 
   return (
     <section id="portfolio-2026" className="relative overflow-hidden" style={{ position: "absolute", width: "80%", left: "50%", transform: "translateX(-50%)", top: "9%" }}>
+      {/* Hidden semantic H1 for Googlebot and Screen Readers */}
+      <h1 className="sr-only">Green Vision — Branding, Graphic Design & 3D Advertising Studio • Rajkot & Surat</h1>
       <div className="bg-zinc-950">
         <div className="space-y-1">
           {allItems.map((item, idx) => (
