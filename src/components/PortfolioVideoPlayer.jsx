@@ -96,27 +96,23 @@ export default function PortfolioVideoPlayer({
       if (!video) return;
 
       if (video.paused) {
-        // Automatically unmute when played
-        video.muted = false;
-        setIsMuted(false);
-
         if (onPlay) {
           onPlay(item.id, video);
         }
-        video
-          .play()
-          .then(() => {
-            setIsPlaying(true);
-          })
-          .catch((err) => {
-            console.warn('Playback error or interrupted:', err);
-            // If browser autoplay policy blocks unmuted play, fallback to muted
-            if (video.paused) {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              setIsPlaying(true);
+            })
+            .catch((err) => {
+              console.warn('Playback error or interrupted, retrying muted:', err);
+              // Fallback to muted playback if browser blocks unmuted play
               video.muted = true;
               setIsMuted(true);
-              video.play().then(() => setIsPlaying(true)).catch(() => {});
-            }
-          });
+              video.play().then(() => setIsPlaying(true)).catch((e) => console.error('Final play attempt failed:', e));
+            });
+        }
       } else {
         video.pause();
         setIsPlaying(false);
@@ -132,8 +128,9 @@ export default function PortfolioVideoPlayer({
     if (e) e.stopPropagation();
     const video = videoRef.current;
     if (!video) return;
-    video.muted = !video.muted;
-    setIsMuted(video.muted);
+    const nextMuted = !video.muted;
+    video.muted = nextMuted;
+    setIsMuted(nextMuted);
   }, []);
 
   const handleTimeUpdate = useCallback(() => {
@@ -215,19 +212,16 @@ export default function PortfolioVideoPlayer({
       {/* Video Element (Full Width Matching Image Width) */}
       <video
         ref={videoRef}
-        src={item.src}
         poster={item.thumbSrc}
         playsInline
+        webkit-playsinline="true"
         muted={isMuted}
+        defaultMuted
         loop
         preload="metadata"
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
         onPlay={() => {
-          if (videoRef.current && videoRef.current.muted) {
-            videoRef.current.muted = false;
-            setIsMuted(false);
-          }
           setIsPlaying(true);
           if (onPlay) onPlay(item.id, videoRef.current);
         }}
@@ -236,7 +230,9 @@ export default function PortfolioVideoPlayer({
           if (onPause) onPause(item.id);
         }}
         className="w-full h-full object-contain bg-zinc-950 block"
-      />
+      >
+        <source src={item.src} type="video/mp4" />
+      </video>
 
       {/* Center Big Play/Pause Button (Visible when paused or briefly on hover) */}
       <AnimatePresence>
