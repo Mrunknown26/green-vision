@@ -140,11 +140,9 @@ export default function PortfolioShowcase2026() {
                 {isVideo ? (
                   <PortfolioVideoPlayer
                     item={item}
-                    index={idx}
                     isActive={activeVideoId === item.id}
                     onPlay={handleVideoPlay}
                     onPause={handleVideoPause}
-                    onExpandLightbox={handleOpenLightbox}
                   />
                 ) : isSvg ? (
                   <div
