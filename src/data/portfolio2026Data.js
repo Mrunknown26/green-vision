@@ -55,7 +55,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_01.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 1",
     "index": 0
   },
@@ -70,7 +70,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_02.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 2",
     "index": 1
   },
@@ -85,7 +85,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_03.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 3",
     "index": 2
   },
@@ -100,7 +100,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_04.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 4",
     "index": 3
   },
@@ -115,7 +115,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_05.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 5",
     "index": 4
   },
@@ -130,7 +130,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_06.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 6",
     "index": 5
   },
@@ -145,7 +145,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_07.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 7",
     "index": 6
   },
@@ -160,7 +160,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_08.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 8",
     "index": 7
   },
@@ -175,7 +175,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_08.jpg",
     "width": 1920,
     "height": 1080,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Video 01",
     "index": 8
   },
@@ -190,7 +190,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_09.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 9",
     "index": 9
   },
@@ -205,7 +205,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_10.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 10",
     "index": 10
   },
@@ -220,7 +220,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_11.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 11",
     "index": 11
   },
@@ -235,7 +235,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_12.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 12",
     "index": 12
   },
@@ -250,7 +250,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_13.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 13",
     "index": 13
   },
@@ -265,7 +265,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_14.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 14",
     "index": 14
   },
@@ -280,7 +280,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_15.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 15",
     "index": 15
   },
@@ -295,7 +295,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_16.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 16",
     "index": 16
   },
@@ -310,7 +310,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_17.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 17",
     "index": 17
   },
@@ -325,7 +325,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_18.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 18",
     "index": 18
   },
@@ -340,7 +340,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_19.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 19",
     "index": 19
   },
@@ -355,7 +355,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_20.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 20",
     "index": 20
   },
@@ -370,7 +370,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_21.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 21",
     "index": 21
   },
@@ -385,7 +385,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_22.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 22",
     "index": 22
   },
@@ -400,7 +400,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_23.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 23",
     "index": 23
   },
@@ -415,7 +415,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_24.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 24",
     "index": 24
   },
@@ -430,7 +430,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_24.jpg",
     "width": 1920,
     "height": 1080,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — EXOTICA STONEX Video",
     "index": 25
   },
@@ -445,7 +445,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_25.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 25",
     "index": 26
   },
@@ -460,7 +460,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_25.jpg",
     "width": 1920,
     "height": 1080,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Scredo Sink Video",
     "index": 27
   },
@@ -475,7 +475,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_26.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 26",
     "index": 28
   },
@@ -505,7 +505,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_28.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 28",
     "index": 30
   },
@@ -520,7 +520,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_29.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 29",
     "index": 31
   },
@@ -535,7 +535,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_30.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 30",
     "index": 32
   },
@@ -550,7 +550,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_31.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 31",
     "index": 33
   },
@@ -565,7 +565,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_32.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 32",
     "index": 34
   },
@@ -580,7 +580,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_33.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 33",
     "index": 35
   },
@@ -595,7 +595,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_34.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 34",
     "index": 36
   },
@@ -610,7 +610,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_35.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 35",
     "index": 37
   },
@@ -625,7 +625,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_36.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 36",
     "index": 38
   },
@@ -640,7 +640,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_37.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 37",
     "index": 39
   },
@@ -655,7 +655,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_38.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 38",
     "index": 40
   },
@@ -670,7 +670,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_39.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 39",
     "index": 41
   },
@@ -685,7 +685,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_40.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 40",
     "index": 42
   },
@@ -700,7 +700,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_40.jpg",
     "width": 1920,
     "height": 1080,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Video 02",
     "index": 43
   },
@@ -715,7 +715,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_41.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 41",
     "index": 44
   },
@@ -730,7 +730,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_42.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 42",
     "index": 45
   },
@@ -745,7 +745,7 @@ export const portfolio2026Items = [
     "thumbSrc": "/images/newportfolio-2026/page_43.jpg",
     "width": 2880,
     "height": 1620,
-    "aspectRatio": 1.7777777777777777,
+    "aspectRatio": 16 / 9,
     "alt": "Green Vision Portfolio — Page 43",
     "index": 46
   }

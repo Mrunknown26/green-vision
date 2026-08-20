@@ -132,7 +132,7 @@ export default function PortfolioShowcase2026() {
               <motion.div
                 key={item.id || idx}
                 initial={{ opacity: 0 }}
-                whileInView={(isSvg) ? { opacity: 1, left: "10%", width: "80%" } : { opacity: 1 }}
+                whileInView={{ opacity: 1 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5 }}
                 className="relative w-full"
@@ -148,7 +148,7 @@ export default function PortfolioShowcase2026() {
                   />
                 ) : isSvg ? (
                   <div
-                    className="relative w-full bg-zinc-950 overflow-hidden cursor-pointer"
+                    className="relative w-full h-full bg-zinc-950 overflow-hidden cursor-pointer"
                     style={{ aspectRatio: `${item.aspectRatio || (16 / 9)}` }}
                     onClick={() => handleOpenLightbox(idx)}
                   >
@@ -164,22 +164,23 @@ export default function PortfolioShowcase2026() {
                         alt={item.alt}
                         fill
                         sizes="100vw"
-                        className="object-contain w-full h-full"
+                        className="object-cover w-full h-full"
                       />
                     </object>
                   </div>
                 ) : (
                   <div
-                    className="relative w-full bg-zinc-950 cursor-pointer"
-                    style={{ aspectRatio: `${item.aspectRatio || (16 / 9)}` }}
+                    className="relative w-full bg-zinc-950 cursor-pointer h-full"
+                    // style={{ aspectRatio: `${item.aspectRatio || (16 / 9)}` }}
                     onClick={() => handleOpenLightbox(idx)}
                   >
                     <Image
                       src={item.src}
                       alt={item.alt}
+                      // style={{ aspectRatio: `${item.aspectRatio || (16 / 9)}` }}
                       fill
                       sizes="100vw"
-                      className="object-contain sm:object-contain w-full h-full"
+                      className="object-cover !relative w-full h-full"
                       priority={idx < 3}
                     />
                   </div>

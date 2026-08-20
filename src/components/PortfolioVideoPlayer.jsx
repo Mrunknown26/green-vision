@@ -13,6 +13,17 @@ import {
   Sparkles,
 } from 'lucide-react';
 
+// Phones and tablets never grant unmuted autoplay before the first tap.
+function isTouchDevice() {
+  if (typeof window === 'undefined' || !window.matchMedia) return false;
+  return window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+}
+
+// Guards against re-entrancy when the gesture came from the player itself.
+function currentContainerContains(container, target) {
+  return !!container && target instanceof Node && container.contains(target);
+}
+
 export default function PortfolioVideoPlayer({
   item,
   index,
@@ -23,9 +34,12 @@ export default function PortfolioVideoPlayer({
 }) {
   const videoRef = useRef(null);
   const containerRef = useRef(null);
+  const pendingPlayRef = useRef(false);
+  const isOnScreenRef = useRef(false);
+  const mutedFallbackRef = useRef(false);
 
   const [isPlaying, setIsPlaying] = useState(false);
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
@@ -45,8 +59,44 @@ export default function PortfolioVideoPlayer({
     }
   }, [isActive, isPlaying]);
 
-  // Viewport visibility detection (IntersectionObserver)
-  // If the video is not visible on screen, it automatically stops/pauses
+  // Play unmuted, always. If the browser blocks unmuted autoplay we stay
+  // paused on the first frame rather than starting the clip without sound.
+  const playWithSound = useCallback(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = false;
+    setIsMuted(false);
+
+    const playPromise = video.play();
+    if (playPromise === undefined) return;
+
+    playPromise
+      .then(() => {
+        pendingPlayRef.current = false;
+      })
+      .catch(() => {
+        // Blocked until the page has been interacted with — remember that this
+        // clip still wants to play, and pick it up on the first user gesture.
+        video.pause();
+        pendingPlayRef.current = true;
+
+        // On touch devices that gesture may never come before the clip scrolls
+        // past, and there is no way to get sound without one. Start muted so it
+        // still autoplays, then restore sound on the first touch.
+        if (!isTouchDevice()) return;
+        video.muted = true;
+        setIsMuted(true);
+        video
+          .play()
+          .then(() => {
+            mutedFallbackRef.current = true;
+          })
+          .catch(() => {});
+      });
+  }, []);
+
+  // Autoplay while the video is on screen, pause it once it leaves.
   useEffect(() => {
     const currentContainer = containerRef.current;
     if (!currentContainer) return;
@@ -54,29 +104,71 @@ export default function PortfolioVideoPlayer({
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting || entry.intersectionRatio < 0.2) {
-            if (videoRef.current && !videoRef.current.paused) {
-              videoRef.current.pause();
-              setIsPlaying(false);
-              if (onPause) onPause(item.id);
-            }
+          const video = videoRef.current;
+          if (!video) return;
+
+          // Tall, full-bleed clips may never reach a high ratio, so also treat
+          // "fills a good chunk of the viewport" as being on screen.
+          const fillsViewport =
+            typeof window !== 'undefined' &&
+            entry.intersectionRect.height >= window.innerHeight * 0.5;
+          const onScreen =
+            entry.isIntersecting &&
+            (entry.intersectionRatio >= 0.5 || fillsViewport);
+
+          isOnScreenRef.current = onScreen;
+
+          if (onScreen) {
+            if (video.paused) playWithSound();
+          } else {
+            pendingPlayRef.current = false;
+            if (!video.paused) video.pause();
           }
         });
       },
       {
-        threshold: [0, 0.2, 0.5],
-        rootMargin: '0px 0px -50px 0px',
+        threshold: [0, 0.25, 0.5, 0.75, 1],
+        rootMargin: '0px',
       }
     );
 
     observer.observe(currentContainer);
 
     return () => {
-      if (currentContainer) {
-        observer.unobserve(currentContainer);
-      }
+      observer.disconnect();
     };
-  }, [item.id, onPause]);
+  }, [item.id, playWithSound]);
+
+  // First user gesture anywhere on the page unblocks sound — start the clip
+  // then, so its very first playback is never a muted one.
+  useEffect(() => {
+    const resumeWithSound = (event) => {
+      const video = videoRef.current;
+      if (!video) return;
+      if (!pendingPlayRef.current && !mutedFallbackRef.current) return;
+      // A gesture on the player itself is handled by its own click toggle.
+      if (currentContainerContains(containerRef.current, event.target)) return;
+
+      // Already rolling, just muted — give it its sound back.
+      if (mutedFallbackRef.current) {
+        mutedFallbackRef.current = false;
+        pendingPlayRef.current = false;
+        video.muted = false;
+        setIsMuted(false);
+        return;
+      }
+
+      if (!isOnScreenRef.current || !video.paused) return;
+      playWithSound();
+    };
+
+    const events = ['pointerdown', 'keydown', 'touchstart'];
+    events.forEach((name) => window.addEventListener(name, resumeWithSound));
+
+    return () => {
+      events.forEach((name) => window.removeEventListener(name, resumeWithSound));
+    };
+  }, [playWithSound]);
 
   // Fullscreen change listener
   useEffect(() => {
@@ -95,7 +187,19 @@ export default function PortfolioVideoPlayer({
       const video = videoRef.current;
       if (!video) return;
 
+      // First tap on a clip that fell back to muted autoplay turns sound on
+      // rather than stopping it.
+      if (!video.paused && mutedFallbackRef.current) {
+        mutedFallbackRef.current = false;
+        video.muted = false;
+        setIsMuted(false);
+        return;
+      }
+
       if (video.paused) {
+        pendingPlayRef.current = false;
+        video.muted = false;
+        setIsMuted(false);
         if (onPlay) {
           onPlay(item.id, video);
         }
@@ -106,11 +210,7 @@ export default function PortfolioVideoPlayer({
               setIsPlaying(true);
             })
             .catch((err) => {
-              console.warn('Playback error or interrupted, retrying muted:', err);
-              // Fallback to muted playback if browser blocks unmuted play
-              video.muted = true;
-              setIsMuted(true);
-              video.play().then(() => setIsPlaying(true)).catch((e) => console.error('Final play attempt failed:', e));
+              console.warn('Unmuted playback was blocked by the browser:', err);
             });
         }
       } else {
@@ -129,6 +229,7 @@ export default function PortfolioVideoPlayer({
     const video = videoRef.current;
     if (!video) return;
     const nextMuted = !video.muted;
+    mutedFallbackRef.current = false;
     video.muted = nextMuted;
     setIsMuted(nextMuted);
   }, []);
@@ -212,11 +313,9 @@ export default function PortfolioVideoPlayer({
       {/* Video Element (Full Width Matching Image Width) */}
       <video
         ref={videoRef}
-        poster={item.thumbSrc}
         playsInline
         webkit-playsinline="true"
         muted={isMuted}
-        defaultMuted
         loop
         preload="metadata"
         onTimeUpdate={handleTimeUpdate}
@@ -231,7 +330,9 @@ export default function PortfolioVideoPlayer({
         }}
         className="w-full h-full object-contain bg-zinc-950 block"
       >
-        <source src={item.src} type="video/mp4" />
+        {/* Media fragment makes the browser paint the clip's own first frame as
+            the poster, instead of a thumbnail supplied on the item object. */}
+        <source src={`${item.src}#t=0.1`} type="video/mp4" />
       </video>
 
       {/* Center Big Play/Pause Button (Visible when paused or briefly on hover) */}
